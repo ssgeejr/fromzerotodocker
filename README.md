@@ -1,5 +1,5 @@
 # From Zero to Docker in under 30 min
-An ioexcept production 
+An ioexcept production
 
 #### Step 1, we need a virtualization engine
 *there are others hypervisors, but for this 30 min jump into the future, we're going to go with VirtualBox*
@@ -45,7 +45,7 @@ In the top right under the [X] button, select the icon [New] and add ports you h
 * Port 8080 for JBoss
 * Port 1521 for Oracle SQL  
 * Port 27017 for Mongo
-* Port 6379 for Reddis
+* Port 6379 for Redis
 * Port 3306 for MySQL
 * Port 3306 for MySQL
 * Port 8091 for Couchbase Console
