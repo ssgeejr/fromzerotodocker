@@ -30,4 +30,24 @@ NOTE: this ensure all traffic is routed to your VM’s mac address and there is 
 ![Locate appliance](step5.png)
 
 ### Appliance Configuration
-1. 
+1. Once the appliance has been imported, select the Image and then Settings  
+![Step 2.1](step2_1.png)
+
+2. Select ‘Network, Attach To [NAT], Click the arrow for Advanced and then click [Port Forwarding]  
+![Step 2.2](step2_2.png)
+
+3. You should see the original settings already implemented for SSH and Tomcat, you wont (should not) need to add these.  
+![Step 2.3](step2_3.png)
+
+&#x1F53B; For your application(s)
+In the top right under the [X] button, select the icon [New] and add ports you have mapped to your internal service(s), for example:
+* Port 8080 for JBoss
+* Port 1521 for Oracle SQL  
+* Port 27017 for Mongo
+* Port 6379 for Reddis
+* Port 3306 for MySQL
+* Port 3306 for MySQL
+* Port 8091 for Couchbase Console
+* Port 11213 for Couchbase DB  
+
+&#x1F53B; *These are the default ports that the applications reside on natively.  You will need to forward the port you want on the Host (the machine running VirtualBox), the value under [Host IP], value under [Guest IP] to the port you have mapped within docker with the –p command.  (See next section, VirtualBox Port Mapping)*
