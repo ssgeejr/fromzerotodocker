@@ -15,6 +15,19 @@
  download the CentOS 7 Appliance [Here](http://someurl)
 
  1. Start VirtualBox
- 2.  Select: File / Import Appliance
-![Import Appliance](stpe2.png)
- 3. blah 
+ 2.  Select: File / Import Appliance   
+ ![Import Appliance](step2.png)
+
+ 3. Locate the File, zerotodocker and select [Next]  
+![Locate appliance](step3.png)
+
+ 4. &#x1F53B; *Important Step:  On the Appliance Settings, ensure you check “[x] Reinitialize the MAAC Address of the network cards”*  
+NOTE: this ensure all traffic is routed to your VM’s mac address and there is not a conflict. With NAT there should be no conflict, however, no one wants to be “that guy”  
+![Locate appliance](step4.png)
+
+
+5. finally import  
+![Locate appliance](step5.png)
+
+### Appliance Configuration
+1. 
