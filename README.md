@@ -1,4 +1,5 @@
 # From Zero to Docker in under 30 min
+An ioexcept production 
 
 #### Step 1, we need a virtualization engine
 *there are others hypervisors, but for this 30 min jump into the future, we're going to go with VirtualBox*
@@ -50,4 +51,8 @@ In the top right under the [X] button, select the icon [New] and add ports you h
 * Port 8091 for Couchbase Console
 * Port 11213 for Couchbase DB  
 
-&#x1F53B; *These are the default ports that the applications reside on natively.  You will need to forward the port you want on the Host (the machine running VirtualBox), the value under [Host IP], value under [Guest IP] to the port you have mapped within docker with the –p command.  (See next section, VirtualBox Port Mapping)*
+&#x1F53B; *These are the default ports that the applications reside on natively.  You will need to forward the port you want on the Host (the machine running VirtualBox), the value under [Host IP], value under [Guest IP] to the port you have mapped within docker with the –p command.*  
+
+### Start and login to the VM
+
+1. Start a terminal session
