@@ -13,7 +13,7 @@ An ioexcept production
     - Download your favorite flavor of linux - Option B isn't supported as part of this tutorial
 
 ##### Option A
- download the CentOS 7 Appliance [Here](http://someurl)
+ download the CentOS 7 Appliance [Here](https://drive.google.com/open?id=1rq4qv4xXvZVriBoV6Pp9A50UcfQ1_QKh)
 
  1. Start VirtualBox
  2.  Select: File / Import Appliance   
