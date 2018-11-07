@@ -24,7 +24,7 @@ sde (redis)       8:64   0    5G  0 disk
 	/opt/redis
 ```
 
-*pro-tip: to force recognition of vmware drives without rebooting your VM:
+_pro-tip: to force recognition of vmware drives without rebooting your VM:_
 ```
 echo "- - -" > /sys/class/scsi_host/host0/scan
 fdisk -l
@@ -107,8 +107,6 @@ echo "/dev/redisvg/datalv1 /opt/redis ext4 defaults 0 0" >> /etc/fstab
 
 ```
 
-
-
 #### ensure that /opt drive is writable by the devops user and that /opt/couchbase,redis,kafka is owned by devops (debatable on the ownership, you do you)
 
 ```
@@ -154,7 +152,6 @@ sdc                           8:32   0   20G  0 disk
 └─dockervg-datalv1          253:19   0   20G  0 lvm  /var/lib/docker
 sr0                          11:0    1 1024M  0 rom
 ```
-
 
 
 #### Database Server
