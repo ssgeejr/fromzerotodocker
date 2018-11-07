@@ -4,7 +4,8 @@
 
 
 #### *as root*
-#### create the devops user and enable ssh login _pro-tip: never use password, no matter the 'reason'_
+#### create the devops user and enable ssh login 
+_pro-tip: never use password, no matter the 'reason'_
 ```
 adduser devops
 cd /home/devops
