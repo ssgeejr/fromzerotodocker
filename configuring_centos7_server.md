@@ -1,7 +1,4 @@
-# #This can be used if you KNOW you have access to the epel-release repo file 
-# #otherwise, use the wget and direct install
-#yum install -y epel-release
-
+# Configure CentOS-7 for Docker use
 
 #### *as root*
 #### create the devops user and enable ssh login 
