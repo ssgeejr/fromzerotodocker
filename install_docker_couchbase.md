@@ -23,9 +23,21 @@ http://docs.couchdb.org/en/stable/config/logging.html
 
 
 #### Installation:
-docker run -d --name db -p 8091-8096:8091-8096 -p 11210-11211:11210-11211 couchbase
 
+Create your volume folders if you are not going to use actual docker volumes  
 
+```
+mkdir -p /opt/couchdb/data
+mkdir -p /opt/couchdb/etc
+```
+
+Start your instance from the command line
+```
+docker run -d --ti --name cbase -p 8091-8096:8091-8096 -p 11210-11211:11210-11211 -v /opt/couchbase/data:/opt/couchdb/data -v /opt/couchbase/etc:/opt/couchdb/etc couchbase
+```
+
+run your instance with docker-compose:
+docker-compose.yml  
 ```ruby
 version: '3'
 services:
@@ -46,7 +58,12 @@ services:
             - /opt/couchbase/etc:/opt/couchdb/etc
 ```
 
-and to use a volume instead of a directory
+start it 
+```
+docker-compose up -d
+```
+
+Using a volume instead of a directory
 
 ```ruby
 ...
@@ -63,7 +80,6 @@ volumes:
 adding a network
 
 ```ruby
-
 ...
 		networks:
 			cb_net:
@@ -82,12 +98,7 @@ networks:
             config: [{subnet: 192.168.50.0/24}]
 ```
 
+From the couchbase documenation  
+* CouchDB uses /opt/couchdb/data to store its data, and is exposed as a volume.
+* CouchDB uses /opt/couchdb/etc to store its configuration.
 
-CouchDB uses /opt/couchdb/data to store its data, and is exposed as a volume.
-
-CouchDB uses /opt/couchdb/etc to store its configuration.
-
- mysql:
-    image: mysql
-    volumes:
-       - db-data:/var/lib/mysql/data
