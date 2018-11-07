@@ -1,5 +1,6 @@
 
 
+ssh-keygen -t rsa -b 4096 -C "devops@avid" -f ~/.ssh/devops.avid
 
 # Install Couchbase via Docker Image
 
@@ -9,6 +10,8 @@ https://docs.couchbase.com/server/6.0/install/getting-started-docker.html
 https://blog.couchbase.com/couchbase-docker-container/
 https://docs.couchbase.com/server/4.1/install/deployment-docker.html
 
+#best practices (or not-good ones)
+https://hub.docker.com/r/couchbase/server/
 
 #### Clustering:
 https://github.com/couchbase/docker/blob/master/compose/couchbase-server-sync-gateway/docker-compose.yml
