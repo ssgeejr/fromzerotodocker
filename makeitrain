@@ -31,6 +31,52 @@ pip install --ignore-installed docker-compose
 systemctl enable docker
 systemctl start docker
 
+
+##---------- OC
+# Check that sysctl net.ipv4.ip_forward is set to 1.
+# https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md#getting-started
+# https://www.mankier.com/1/oc-cluster-up
+
+
+cat << EOF > /etc/docker/daemon.json
+{
+   "insecure-registries": [
+     "172.30.0.0/16"
+   ]
+}
+EOF
+
+systemctl enable firewalld
+systemctl start firewalld
+systemctl is-enabled firewalld
+systemctl is-active firewalld
+
+
+firewall-cmd --permanent --new-zone dockerc
+firewall-cmd --permanent --zone dockerc --add-source 172.17.0.0/16
+firewall-cmd --permanent --zone dockerc --add-port 8443/tcp
+firewall-cmd --permanent --zone dockerc --add-port 53/udp
+firewall-cmd --permanent --zone dockerc --add-port 8053/udp
+firewall-cmd --reload
+
+
+
+
+# once installed
+#--use-existing-config
+
+
+
+
+
+
+
+sudo firewall-cmd --zone=public --permanent --add-port=8443/tcp.
+
+##---------- OC
+
+
+
 cd /opt
 wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" -O jdk-8u181-linux-x64.tar.gz http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz
 tar -zxf jdk-8u181-linux-x64.tar.gz
