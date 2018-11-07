@@ -160,7 +160,7 @@ docker run -v /myredis/conf/redis.conf:/usr/local/etc/redis/redis.conf -v /opt/r
 
 
 
-# Kafka
+# Kafka *(NOT YET READY FOR USE ... under development)*
 
 Reference:
 https://github.com/simplesteph/kafka-stack-docker-compose
