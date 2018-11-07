@@ -5,6 +5,15 @@ from: https://linoxide.com/linux-how-to/setup-openshift-origin-centos-7/
 vi /etc/selinux/config
 ```
 
+*See 'configuring new centos-7 server*  
+```sh
+ sudo hostnamectl set-hostname dbsrv.devops-sandbox
+```
+```sh
+ sudo hostnamectl set-hostname osorg.devops-sandbox
+```
+
+
 check/update settings to reflect  
 SELINUXTYPE=targeted  
 
