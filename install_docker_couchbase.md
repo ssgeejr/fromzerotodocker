@@ -1,8 +1,6 @@
-
-
-ssh-keygen -t rsa -b 4096 -C "devops@avid" -f ~/.ssh/devops.avid
-
 # Install Couchbase via Docker Image
+
+### ToDo:  Add mongo install as well 
 
 #### Reference docs:
 https://hub.docker.com/r/couchbase/server/
