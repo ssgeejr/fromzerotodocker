@@ -4,7 +4,7 @@
 
 
 #### *as root*
-#### create the devops user and enable ssh login **pro-tip: never use password, no matter the 'reason'**
+#### create the devops user and enable ssh login _pro-tip: never use password, no matter the 'reason'_
 ```
 adduser devops
 cd /home/devops
@@ -81,7 +81,7 @@ echo "export M2_HOME" >> /etc/profile
 . /etc/profile
 ```
   
-**pro-tip:  create the folder; /opt/tools/repo, edit /opt/tools/maven-3.6.0/conf/settings.xml and add to the correct location. This is done to ensure your root directory or home directory does not fill up with library files**  
+_pro-tip:  create the folder; /opt/tools/repo, edit /opt/tools/maven-3.6.0/conf/settings.xml and add to the correct location. This is done to ensure your root directory or home directory does not fill up with library files_  
 ```
 <localRepository>/opt/tools/repo</localRepository>
 ```
@@ -92,7 +92,7 @@ echo "export M2_HOME" >> /etc/profile
 usermod -aG docker devops
 ```
 
-**pro-tip:  you will need to log out and back in for your new group settings to take effect**
+_pro-tip:  you will need to log out and back in for your new group settings to take effect_
 
 Now it's time to **make it rain** and get your development groove on!  
 
