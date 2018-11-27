@@ -118,6 +118,12 @@ chown -R devops:devops /opt/kafka
 ```
 
 
+
+
+
+
+
+
 ### Final checks ... 
 Your systems should look similar to this*
 
