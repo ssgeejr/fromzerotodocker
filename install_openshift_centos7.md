@@ -34,6 +34,9 @@ config registries & enable selinux:
 
 # "insecure-registries" : ["172.30.0.0/16", "skupoc.dev.sprint.com:5000"]
 
+```
+oc cluster up --public-hostname=192.168.56.15 --http-proxy=http://proxy.ip:port --https-proxy=https://proxy.ip:port --no-proxy=[192.168.56.0/24,172.0.0. 0/8,192.168.56.15,192.168.56.15,localhost]
+```
 
 systemctl daemon-reload
 systemctl restart docker
